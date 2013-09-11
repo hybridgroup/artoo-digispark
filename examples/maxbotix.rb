@@ -3,7 +3,7 @@ require 'artoo'
 # Circuit and schematic here: http://www.electrojoystick.com/tutorial/?page_id=285
 
 connection :digispark, :adaptor => :littlewire, :vendor => 0x1781, :product => 0x0c9f
-device :sonar, :driver => :maxbotix, :pin => 0, :interval => 0.5
+device :sonar, :driver => :maxbotix, :pin => 5, :interval => 0.5
 device :board, :driver => :device_info
 
 work do

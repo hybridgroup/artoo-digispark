@@ -50,7 +50,7 @@ module Artoo
 
       # GPIO - analog interface
       def analog_read(pin)
-        littlewire.analog_read(pin) * 1000.0
+        littlewire.analog_read(analog_pin(pin)) * 1000.0
       end
 
       # GPIO - PWM interface
@@ -91,6 +91,17 @@ module Artoo
           :idVendor  => vendor,
           :idProduct => product
         ).first
+      end
+
+      def analog_pin(pin)
+        case pin
+        when 5
+          0
+        when 2
+          1
+        else
+          raise "Invalid pin" # TODO: raise exception class
+        end
       end
 
       # Uses method missing to call Littlewire methods
