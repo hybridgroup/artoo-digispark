@@ -1,6 +1,6 @@
 # Artoo Adaptor For Digispark
 
-This repository contains the Artoo (http://artoo.io/) adaptor for the Digispark (http://www.kickstarter.com/projects/digistump/digispark-the-tiny-arduino-enabled-usb-dev-board) ATTiny-based USB development board, that has the Little Wire (http://littlewire.cc/) protocol firmware installed.
+This repository contains the Artoo (http://artoo.io/) adaptor for the Digispark (http://www.kickstarter.com/projects/digistump/digispark-the-tiny-arduino-enabled-usb-dev-board) ATTiny-based USB development board with the Little Wire (http://littlewire.cc/) protocol firmware installed.
 
 Artoo is a open source micro-framework for robotics using Ruby.
 
@@ -49,7 +49,9 @@ The following hardware devices have driver support, via the artoo-i2c gem:
 
 ## Connecting to Digispark
 
-You can use Artoo with a Digispark (http://www.kickstarter.com/projects/digistump/digispark-the-tiny-arduino-enabled-usb-dev-board) ATTiny-based USB development board, that has the Little Wire (http://littlewire.cc/) protocol firmware installed. For instructions on how to install Little Wire on a Digispark check out http://digistump.com/board/index.php/topic,160.0.html
+If your Digispark (http://www.kickstarter.com/projects/digistump/digispark-the-tiny-arduino-enabled-usb-dev-board) ATTiny-based USB development board already has the Little Wire (http://littlewire.cc/) protocol firmware installed, you can connect right away with Artoo. 
+
+Otherwise, for instructions on how to install Little Wire on a Digispark check out http://digistump.com/board/index.php/topic,160.0.html
 
 ### OSX
 
