@@ -5,7 +5,7 @@ require 'artoo'
 # with Little Wire protocol (http://littlewire.cc)
 
 connection :digispark, :adaptor => :littlewire, :vendor => 0x1781, :product => 0x0c9f
-device :board, :driver => :board
+device :board, :driver => :device_info
 device :red_led, :driver => :led, :pin => 0
 device :green_led, :driver => :led, :pin => 1
 device :blue_led, :driver => :led, :pin => 2

@@ -37,6 +37,7 @@ module Artoo
         "Little Wire"
       end
 
+      # GPIO - digital interface
       def digital_read(pin)
         littlewire.digital_write(pin, true)
         littlewire.digital_read(pin)
@@ -47,6 +48,12 @@ module Artoo
         littlewire.digital_write(pin, val)
       end
 
+      # GPIO - analog interface
+      def analog_read(pin)
+        littlewire.analog_read(pin) * 1000.0
+      end
+
+      # GPIO - PWM interface
       def pwm_write(pin, level)
         littlewire.software_pwm_write(pin, level)
       end

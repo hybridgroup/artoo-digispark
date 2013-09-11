@@ -4,7 +4,7 @@ require 'artoo'
 
 connection :digispark, :adaptor => :littlewire, :vendor => 0x1781, :product => 0x0c9f
 device :sonar, :driver => :maxbotix, :pin => 0, :interval => 0.5
-device :board, :driver => :board
+device :board, :driver => :device_info
 
 work do
   on sonar, :range => :sonar_reading
@@ -15,5 +15,5 @@ work do
 end
 
 def sonar_reading(*args)
-  puts args[1] * 1000
+  puts args[1]
 end

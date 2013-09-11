@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     artoo-digispark (0.0.1)
-      artoo (~> 1.1.0)
+      artoo (~> 1.1.1)
       artoo-gpio
       artoo-i2c
       littlewire (~> 0.9.7)
@@ -10,7 +10,7 @@ PATH
 GEM
   remote: http://rubygems.org/
   specs:
-    artoo (1.1.0)
+    artoo (1.1.1)
       celluloid (~> 0.15.0)
       celluloid-io (~> 0.15.0)
       multi_json (~> 1.6)
