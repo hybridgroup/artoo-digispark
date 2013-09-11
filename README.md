@@ -19,15 +19,14 @@ gem install artoo-digispark
 ## Using
 
 ```ruby
-require 'artoo'
-
-connection :digispark, :adaptor => :littlewire, :port => '127.0.0.1:8023'
+connection :digispark, :adaptor => :littlewire, :vendor => 0x1781, :product => 0x0c9f
 device :board, :driver => :device_info
 device :led, :driver => :led, :pin => 1
 
 work do
-  puts "Firmware name #{board.firmware_name}"
-  puts "Firmata version #{board.version}"
+  puts "Firmware name: #{board.firmware_name}"
+  puts "Firmware version: #{board.version}"
+
   every 1.second do
     led.toggle
   end
