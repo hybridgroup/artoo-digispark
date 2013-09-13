@@ -11,7 +11,7 @@ work do
     puts "joystick x: #{value[1][:x]}, y: #{value[1][:y]}"
   }
 
-  puts "Firmware name: #{board.name}"
+  puts "Firmware name: #{board.firmware_name}"
   puts "Firmware version: #{board.version}"
 end
 

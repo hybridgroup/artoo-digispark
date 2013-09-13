@@ -33,8 +33,14 @@ module Artoo
 
       # Returns name of littlewire board
       # @return [String]
-      def name
+      def firmware_name
         "Little Wire"
+      end
+
+      # Returns version of littlewire board
+      # @return [String]
+      def version
+        littlewire.version
       end
 
       # GPIO - digital interface
@@ -61,6 +67,7 @@ module Artoo
       # i2c interface
       def i2c_start(address)
         @i2c_address = address
+        littlewire.i2c.delay = 1
         littlewire.i2c.delay = 0
       end
 
@@ -71,7 +78,7 @@ module Artoo
       def i2c_read(size)
         littlewire.i2c.start(@i2c_address, :read)
         val = littlewire.i2c.read(size, true)
-        val.bytes
+        val
       end
 
       def i2c_write(*data)

@@ -11,7 +11,7 @@ device :green_led, :driver => :led, :pin => 1
 device :blue_led, :driver => :led, :pin => 2
 
 work do
-  puts "Firmware name: #{board.name}"
+  puts "Firmware name: #{board.firmware_name}"
   puts "Firmware version: #{board.version}"
 
   @count = 0
