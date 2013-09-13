@@ -31,9 +31,9 @@ module Artoo
         super
       end
 
-      # Returns firmware name of littlewire board
+      # Returns name of littlewire board
       # @return [String]
-      def firmware_name
+      def name
         "Little Wire"
       end
 
