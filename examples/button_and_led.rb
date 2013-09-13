@@ -8,7 +8,7 @@ device :led, :driver => :led, :pin => 1
 device :button, :driver => :button, :pin => 0, :interval => 0.01
 
 work do
-  puts "Firmware name: #{board.firmware_name}"
+  puts "Firmware name: #{board.name}"
   puts "Firmware version: #{board.version}"
   puts "Press the button connected on pin #{button.pin}..."
 
