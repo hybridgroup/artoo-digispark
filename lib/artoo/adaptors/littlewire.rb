@@ -5,7 +5,7 @@ module Artoo
     # Connect to Digispark or Littlewire device using Little Wire protocol
     # @see http://littlewire.cc/
     class Littlewire < Adaptor
-      attr_reader :littlewire, :vendor, :product, :usb
+      attr_reader :littlewire, :vendor, :product, :usb, :firmware_version
 
       def initialize(params={})
         super
@@ -40,7 +40,7 @@ module Artoo
       # Returns version of littlewire board
       # @return [String]
       def version
-        littlewire.version
+        @firmware_version ||= littlewire.version
       end
 
       # GPIO - digital interface
@@ -66,12 +66,12 @@ module Artoo
 
       # i2c interface
       def i2c_start(address)
+        raise "i2c support requires version 1.3+ of littlewire" unless version >= "1.3"
         @i2c_address = address
         littlewire.i2c.delay = 10
       end
 
       def i2c_end
-        
       end
 
       def i2c_read(size)
