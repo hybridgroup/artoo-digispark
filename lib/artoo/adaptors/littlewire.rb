@@ -67,8 +67,7 @@ module Artoo
       # i2c interface
       def i2c_start(address)
         @i2c_address = address
-        littlewire.i2c.delay = 1
-        littlewire.i2c.delay = 0
+        littlewire.i2c.delay = 10
       end
 
       def i2c_end
