@@ -2,5 +2,7 @@ task :default => :prepare
 
 task :prepare do
   #exec 'artoo install commands'
-  puts "hello"
+  $stdout.puts "hello"
 end
+
+puts "yoyoyo"
