@@ -1,5 +1,6 @@
 task :default => :prepare
 
 task :prepare do
-  exec 'artoo install commands'
+  #exec 'artoo install commands'
+  puts "hello"
 end
