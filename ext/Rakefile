@@ -1,0 +1,5 @@
+task :default => :prepare
+
+task :prepare do
+  exec 'artoo install commands'
+end
