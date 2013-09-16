@@ -2,11 +2,9 @@ require 'artoo/commands/install'
 
 module Artoo
   module Commands
-    class Digispark < Commands
-      package_name "digispark"
-
-      desc "littlewire", "Installs littlewire firmware"
-      def littlewire
+    class Install < Commands
+      desc "digispark", "Installs firmware on Digispark devices"
+      def digispark
         case os
         when :linux
           say "Hello from linux"
@@ -16,10 +14,6 @@ module Artoo
           say "OS not yet supported..."
         end
       end
-    end
-
-    class Install < Commands
-      register Digispark, 'digispark', 'digispark [SUBCOMMAND]', 'Installs firmware on a Digispark'
     end
   end
 end
