@@ -1,8 +1,8 @@
-task :default => :prepare
+require 'artoo/commands/install'
 
-task :prepare do
-  #exec 'artoo install commands'
-  $stdout.puts "hello"
+task :default => :install_commands
+
+task :install_commands do
+  @install = Artoo::Commands::Install.new
+  @install.command(File.expand_path(File.dirname(__FILE__) + "/../lib/artoo/commands/digispark.rb"))
 end
-
-puts "yoyoyo"
