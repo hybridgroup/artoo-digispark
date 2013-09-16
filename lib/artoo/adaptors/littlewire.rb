@@ -61,7 +61,7 @@ module Artoo
 
       # GPIO - PWM interface
       def pwm_write(pin, level)
-        littlewire.software_pwm_write(pin, level)
+        littlewire.hardware_pwm_write(pin, level)
       end
 
       # i2c interface
