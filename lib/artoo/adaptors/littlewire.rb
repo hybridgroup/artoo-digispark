@@ -64,6 +64,11 @@ module Artoo
         littlewire.hardware_pwm_write(pin, level)
       end
 
+      # GPIO - servo interface
+      def servo_write(pin, level)
+        littlewire.servo_write(pin, level - 90)
+      end
+
       # i2c interface
       def i2c_start(address)
         raise "i2c support requires version 1.3+ of littlewire" unless version >= "1.3"
