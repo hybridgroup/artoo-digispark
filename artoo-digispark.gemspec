@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.extensions    = ["ext/Rakefile"]
 
-  s.add_runtime_dependency 'artoo'
+  s.add_runtime_dependency 'artoo', '~> 1.2.0'
   s.add_runtime_dependency 'artoo-gpio'
   s.add_runtime_dependency 'artoo-i2c'
   s.add_runtime_dependency 'littlewire', '~> 0.9.10'
