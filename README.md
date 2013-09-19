@@ -106,7 +106,7 @@ Now use the `ID` info returned to find the `product` and `vendor` ID's for the c
 
 ### Windows
 
-Someone please fill in the blanks here...
+We are currently working with the Celluloid team to add Windows support. Please check back soon!
 
 ## Contributing
 
