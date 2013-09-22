@@ -1,3 +1,4 @@
+require 'littlewire'
 require 'artoo'
 
 # Circuit and schematic here: http://www.electrojoystick.com/tutorial/?page_id=285

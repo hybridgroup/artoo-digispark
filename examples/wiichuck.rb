@@ -1,3 +1,4 @@
+require 'littlewire'
 require 'artoo'
 
 connection :digispark, :adaptor => :littlewire, :vendor => 0x1781, :product => 0x0c9f

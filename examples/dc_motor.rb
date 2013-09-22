@@ -1,3 +1,4 @@
+require 'littlewire'
 require 'artoo'
 
 #Circuit's breadboard layout here: http://learn.adafruit.com/adafruit-arduino-lesson-13-dc-motors/breadboard-layout

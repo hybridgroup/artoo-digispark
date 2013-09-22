@@ -1,3 +1,4 @@
+require 'littlewire'
 require 'artoo'
 
 # Circuit and schematic here: http://arduino.cc/en/tutorial/button

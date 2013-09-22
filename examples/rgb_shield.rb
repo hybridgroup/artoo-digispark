@@ -1,3 +1,4 @@
+require 'littlewire'
 require 'artoo'
 
 # Uses Digispark USB board (http://digistump.com/products/1) 
