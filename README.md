@@ -50,9 +50,9 @@ The following hardware devices have driver support, via the artoo-i2c gem:
 ## Connecting to Digispark
 
 Connecting to the Digispark (http://www.kickstarter.com/projects/digistump/digispark-the-tiny-arduino-enabled-usb-dev-board)
-ATTiny-based USB development board is very easy using Artoo; Artoo uses the littlewire (http://littlewire.cc/) protocol firmware
-to communicate with the digispark and includes CLI commands to make installation a breeze, after littlewire is installed you 
-can connect right away with Artoo.
+ATTiny-based USB development board is very easy using Artoo, first we need to install the littlewire (http://littlewire.cc/)
+protocol to communicate with the digispark, Artoo includes CLI commands to make the process of uploading littlewire to the
+digispark as simple as possible, after littlewire has been uploaded you can connect and communicate using Artoo.
 
 ### OSX
 
@@ -83,7 +83,7 @@ Once plugged in, use the `artoo connect scan` command with the  `-t usb` option 
 $ artoo connect scan -t usb
 ```
 
-Now use the `ID` info returned to find the `product` and `vendor` ID's for the connection info Digispark in your Artoo code.
+Now use the `ID` info returned to find the `product` and `vendor` ID's required to establish a connection with the Digispark in your Artoo code.
 
 That is it, you are set to start running Artoo digispark examples.
 
@@ -114,17 +114,17 @@ after running the `artoo littlewire upload` command):
 $ artoo littlewire upload
 ```
 
-That is it, you are set to start running Artoo digispark examples.
-
-Thanks to [@bluebie](https://github.com/Bluebie) for the help with udev rules used when uploading littlewire to the digispark! (https://github.com/Bluebie/micronucleus-t85/wiki/Ubuntu-Linux)
-
 Once plugged in, use the `artoo connect scan` command with the  `-t usb` option to verify your connection info:
 
 ```
 $ artoo connect scan -t usb
 ```
 
-Now use the `ID` info returned to find the `product` and `vendor` ID's for the connection info Digispark in your Artoo code.
+Now use the `ID` info returned to find the `product` and `vendor` ID's required to establish a connection with the Digispark in your Artoo code.
+
+That is it, you are set to start running Artoo digispark examples.
+
+Thanks to [@bluebie](https://github.com/Bluebie) for the help with udev rules used when uploading littlewire to the digispark! (https://github.com/Bluebie/micronucleus-t85/wiki/Ubuntu-Linux)
 
 ### Windows
 
