@@ -70,7 +70,7 @@ $ gem install artoo-digispark
 ```
 
 After installing the artoo-digispark gem run the following command to
-upload littlewire to the digispark, plug it in to a USB port when
+upload littlewire to the digispark, plug it to a USB port when
 prompted:
 
 ```
@@ -90,10 +90,10 @@ That is it, you are set to start running Artoo digispark examples.
 ### Ubuntu
 
 The main steps are:
-- Add a udev rule to allow access to the Digispark device
+- Add a udev rule to allow access to the Digispark device (Do not worry
+  about this, the `cylon littlewire upload` command does it for you if none is detected)
 - Plug in the Digispark to the USB port
 - Connect to the device via Artoo
-
 
 DO NOT plug in the Digispark to your computer's USB port until prompted.
 
@@ -104,7 +104,7 @@ $ gem install artoo-digispark
 ```
 
 After installing the artoo-digispark gem run the following command to
-upload littlewire to the digispark, plug it in to a USB port when
+upload littlewire to the digispark, plug it to a USB port when
 prompted, you might be asked to enter your sudo password, since
 uploading littlewire to the digispark requires some new udev rules, you
 can check and review them in /etc/udev/rules.d/49-micronucleus.rules
