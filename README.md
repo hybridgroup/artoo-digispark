@@ -49,17 +49,43 @@ The following hardware devices have driver support, via the artoo-i2c gem:
 
 ## Connecting to Digispark
 
-If your Digispark (http://www.kickstarter.com/projects/digistump/digispark-the-tiny-arduino-enabled-usb-dev-board) ATTiny-based USB development board already has the Little Wire (http://littlewire.cc/) protocol firmware installed, you can connect right away with Artoo. 
-
-Otherwise, for instructions on how to install Little Wire on a Digispark check out http://digistump.com/board/index.php/topic,160.0.html
+Connecting to the Digispark (http://www.kickstarter.com/projects/digistump/digispark-the-tiny-arduino-enabled-usb-dev-board)
+ATTiny-based USB development board is very easy using Artoo; Artoo uses the littlewire (http://littlewire.cc/) protocol firmware
+to communicate with the digispark and includes CLI commands to make installation a breeze, after littlewire is installed you 
+can connect right away with Artoo.
 
 ### OSX
 
 The main steps are:
-- Plug in the Digispark to the USB port
+- Install the artoo-digispark gem
+- Upload the Littlewire protocol to the digispark
 - Connect to the device via Artoo
 
-First plug the Digispark into your computer via the USB port. Then... (directions go here)
+DO NOT plug in the Digispark to your computer's USB port until prompted.
+
+Install the artoo-digispark gem:
+
+```
+$ gem install artoo-digispark
+```
+
+After installing the artoo-digispark gem run the following command to
+upload littlewire to the digispark, plug it in to a USB port when
+prompted:
+
+```
+$ artoo littlewire upload
+```
+
+Once plugged in, use the `artoo connect scan` command with the  `-t usb` option to verify your connection info:
+
+```
+$ artoo connect scan -t usb
+```
+
+Now use the `ID` info returned to find the `product` and `vendor` ID's for the connection info Digispark in your Artoo code.
+
+That is it, you are set to start running Artoo digispark examples.
 
 ### Ubuntu
 
@@ -68,33 +94,29 @@ The main steps are:
 - Plug in the Digispark to the USB port
 - Connect to the device via Artoo
 
-First, you must add a udev rule, so that Artoo can communicate with the USB device. Ubuntu and other modern Linux distibutions use udev to manage device files when USB devices are added and removed. By default, udev will create a device with read-only permission which will not allow to you download code. You must place the udev rules below into a file named /etc/udev/rules.d/49-micronucleus.rules.
+
+DO NOT plug in the Digispark to your computer's USB port until prompted.
+
+Install the artoo-digispark gem:
 
 ```
-# UDEV Rules for Micronucleus boards including the Digispark.
-# This file must be placed at:
-#
-# /etc/udev/rules.d/49-micronucleus.rules    (preferred location)
-#   or
-# /lib/udev/rules.d/49-micronucleus.rules    (req'd on some broken systems)
-#
-# After this file is copied, physically unplug and reconnect the board.
-#
-SUBSYSTEMS=="usb", ATTRS{idVendor}=="1781", ATTRS{idProduct}=="0c9f", MODE:="0666"
-KERNEL=="ttyACM*", ATTRS{idVendor}=="1781", ATTRS{idProduct}=="0c9f", MODE:="0666", ENV{ID_MM_DEVICE_IGNORE}="1"
-
-SUBSYSTEMS=="usb", ATTRS{idVendor}=="16d0", ATTRS{idProduct}=="0753", MODE:="0666"
-KERNEL=="ttyACM*", ATTRS{idVendor}=="16d0", ATTRS{idProduct}=="0753", MODE:="0666", ENV{ID_MM_DEVICE_IGNORE}="1"
-#
-# If you share your linux system with other users, or just don't like the
-# idea of write permission for everybody, you can replace MODE:="0666" with
-# OWNER:="yourusername" to create the device owned by you, or with
-# GROUP:="somegroupname" and mange access using standard unix groups.
+$ gem install artoo-digispark
 ```
 
-Thanks to [@bluebie](https://github.com/Bluebie) for these instructions! (https://github.com/Bluebie/micronucleus-t85/wiki/Ubuntu-Linux)
+After installing the artoo-digispark gem run the following command to
+upload littlewire to the digispark, plug it in to a USB port when
+prompted, you might be asked to enter your sudo password, since
+uploading littlewire to the digispark requires some new udev rules, you
+can check and review them in /etc/udev/rules.d/49-micronucleus.rules
+after running the `artoo littlewire upload` command):
 
-Now plug the Digispark into your computer via the USB port.
+```
+$ artoo littlewire upload
+```
+
+That is it, you are set to start running Artoo digispark examples.
+
+Thanks to [@bluebie](https://github.com/Bluebie) for the help with udev rules used when uploading littlewire to the digispark! (https://github.com/Bluebie/micronucleus-t85/wiki/Ubuntu-Linux)
 
 Once plugged in, use the `artoo connect scan` command with the  `-t usb` option to verify your connection info:
 
