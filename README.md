@@ -49,10 +49,7 @@ The following hardware devices have driver support, via the artoo-i2c gem:
 
 ## Connecting to Digispark
 
-Connecting to the Digispark (http://www.kickstarter.com/projects/digistump/digispark-the-tiny-arduino-enabled-usb-dev-board)
-ATTiny-based USB development board is very easy using Artoo, first we need to install the littlewire (http://littlewire.cc/)
-protocol to communicate with the digispark, Artoo includes CLI commands to make the process of uploading littlewire to the
-digispark as simple as possible, after littlewire has been uploaded you can connect and communicate using Artoo.
+Connecting to the Digispark (http://www.kickstarter.com/projects/digistump/digispark-the-tiny-arduino-enabled-usb-dev-board) ATTiny-based USB development board is very easy using Artoo, first we need to install the littlewire (http://littlewire.cc/) protocol to communicate with the digispark, Artoo includes CLI commands to make the process of uploading littlewire to the digispark as simple as possible, after littlewire has been uploaded you can connect and communicate using Artoo.
 
 ### OSX
 
@@ -69,9 +66,7 @@ Install the artoo-digispark gem:
 $ gem install artoo-digispark
 ```
 
-After installing the artoo-digispark gem run the following command to
-upload littlewire to the digispark, plug it to a USB port when
-prompted:
+After installing the artoo-digispark gem run the following command to upload littlewire to the digispark, plug it to a USB port when prompted:
 
 ```
 $ artoo littlewire upload
@@ -104,12 +99,7 @@ Install the artoo-digispark gem:
 $ gem install artoo-digispark
 ```
 
-After installing the artoo-digispark gem run the following command to
-upload littlewire to the digispark, plug it to a USB port when
-prompted, you might be asked to enter your sudo password, since
-uploading littlewire to the digispark requires some new udev rules, you
-can check and review them in /etc/udev/rules.d/49-micronucleus.rules
-after running the `artoo littlewire upload` command):
+After installing the artoo-digispark gem run the following command to upload littlewire to the digispark, plug it to a USB port when prompted, you might be asked to enter your sudo password, since uploading littlewire to the digispark requires some new udev rules, you can check and review them in /etc/udev/rules.d/49-micronucleus.rules after running the `artoo littlewire upload` command):
 
 ```
 $ artoo littlewire upload
@@ -131,10 +121,27 @@ Thanks to [@bluebie](https://github.com/Bluebie) for the help with udev rules us
 
 We are currently working with the Celluloid team to add Windows support. Please check back soon!
 
+## Documentation
+
+Check out our [documentation](http://artoo.io/documentation/) for lots of information about how to use Artoo.
+
+## IRC
+
+Need more help? Just want to say "Hello"? Come visit us on IRC freenode #artoo
+
 ## Contributing
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+* All patches must be provided under the Apache 2.0 License
+* Please use the -s option in git to "sign off" that the commit is your work and you are providing it under the Apache 2.0 License
+* Submit a Github Pull Request to the appropriate branch and ideally discuss the changes with us in IRC.
+* We will look at the patch, test it out, and give you feedback.
+* Avoid doing minor whitespace changes, renamings, etc. along with merged content. These will be done by the maintainers from time to time but they can complicate merges and should be done seperately.
+* Take care to maintain the existing coding style.
+* Add unit tests for any new or changed functionality.
+* All pull requests should be "fast forward"
+  * If there are commits after yours use “git rebase -i <new_head_branch>”
+  * If you have local changes you may need to use “git stash”
+  * For git help see [progit](http://git-scm.com/book) which is an awesome (and free) book on git
+
+
+(c) 2012-2014 The Hybrid Group

@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.name        = "artoo-digispark"
   s.version     = Artoo::Digispark::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Ron Evans"]
+  s.authors     = ["Ron Evans", "Edgar Silva"]
   s.email       = ["artoo@hybridgroup.com"]
   s.homepage    = "https://github.com/hybridgroup/artoo-digispark"
   s.summary     = %q{Artoo adaptor for Digispark}
@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.extensions    = ["ext/Rakefile"]
 
-  s.add_runtime_dependency 'artoo', '>= 1.4.0'
+  s.add_runtime_dependency 'artoo', '>= 1.6.0'
   s.add_runtime_dependency 'artoo-gpio'
   s.add_runtime_dependency 'artoo-i2c'
   s.add_runtime_dependency 'littlewire', '>= 0.9.10'
