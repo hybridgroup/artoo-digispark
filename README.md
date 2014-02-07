@@ -87,7 +87,7 @@ That is it, you are set to start running Artoo digispark examples.
 The main steps are:
 - Install the artoo-digispark gem
 - Add a udev rule to allow access to the Digispark device (Do not worry
-  about this, the `cylon littlewire upload` command does it for you if none is detected)
+  about this, the `artoo littlewire upload` command does it for you if none is detected)
 - Plug in the Digispark to the USB port
 - Connect to the device via Artoo
 
